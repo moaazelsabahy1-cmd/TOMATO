@@ -1,9 +1,10 @@
 import { useState } from "react";
-  import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <motion.nav
@@ -54,6 +55,7 @@ function Navbar() {
           className="nav-action"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => navigate("/menu")}
         >
           Order Now
         </motion.button>

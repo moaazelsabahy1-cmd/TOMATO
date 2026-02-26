@@ -15,7 +15,7 @@ const menuData = [
     name: "Margherita Pizza",
     desc: "Classic Italian pizza with fresh tomato sauce and mozzarella.",
     price: 120,
-    img: "   public/images/pexels-vince-2147491.jpg",
+    img: "public/images/pexels-cup-of-couple-8471703.jpg",
     category: "pizza",
   },
   {
