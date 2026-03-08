@@ -38,6 +38,12 @@ function Hero() {
             transition={{ delay: 0.6, duration: 0.4 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              const menuSection = document.getElementById("menu");
+              if (menuSection) {
+                menuSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           >
             View Menu
           </motion.button>

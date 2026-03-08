@@ -1,7 +1,5 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbar.jsx";
-import Footer from "./components/footer.jsx";
 import Hero from "./components/hero.jsx";
 import About from "./components/About.jsx";
 import FoodMenu from "./components/foodmenu.jsx";
@@ -15,7 +13,7 @@ import BranchesPage from "./branches/page.jsx";
 export default function App() {
   return (
     <>
-      <Navbar />
+      
       <Routes>
         <Route
           path="/"
@@ -34,7 +32,7 @@ export default function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/branches" element={<BranchesPage />} />
       </Routes>
-      <Footer />
+      
     </>
   );
 }
