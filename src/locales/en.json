@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "menu": "Menu",
+    "services": "Services",
+    "branches": "Branches",
+    "orderNow": "Order Now",
+    "langEn": "EN",
+    "langAr": "AR"
+  },
+  "hero": {
+    "titleLine1": "Order your",
+    "titleLine2": "favourite food here",
+    "subtitle": "Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.",
+    "viewMenu": "View Menu",
+    "imageAlt": "Food"
+  },
+  "menu": {
+    "title": "Our Menu",
+    "tabs": {
+      "all": "All Menu",
+      "pasta": "Pasta",
+      "pizza": "Pizza",
+      "burger": "Burger",
+      "desserts": "Desserts"
+    },
+    "noItems": "No items in this category.",
+    "close": "Close",
+    "currency": "EGP",
+    "items": {
+      "1": {
+        "name": "Margherita Pizza",
+        "desc": "Classic Italian pizza with fresh tomato sauce and mozzarella."
+      },
+      "2": {
+        "name": "Pepperoni Pizza",
+        "desc": "Loaded with pepperoni and melted cheese."
+      },
+      "3": {
+        "name": "Hawaiian Pizza",
+        "desc": "Pizza with ham, pineapple, and mozzarella cheese."
+      },
+      "4": {
+        "name": "BBQ Chicken Pizza",
+        "desc": "Grilled chicken with BBQ sauce and red onions."
+      },
+      "5": {
+        "name": "Creamy Pasta",
+        "desc": "Pasta with creamy mushroom sauce and parmesan."
+      },
+      "6": {
+        "name": "Spaghetti Carbonara",
+        "desc": "Classic Italian pasta with eggs, cheese, and bacon."
+      },
+      "7": {
+        "name": "Penne Arrabbiata",
+        "desc": "Spicy pasta with tomato sauce and red chili peppers."
+      },
+      "8": {
+        "name": "Lasagna",
+        "desc": "Layered pasta with meat sauce, cheese, and béchamel."
+      },
+      "9": {
+        "name": "Classic Burger",
+        "desc": "Juicy beef patty with lettuce, tomato, and special sauce."
+      },
+      "10": {
+        "name": "Cheese Burger",
+        "desc": "Classic burger with melted cheddar cheese."
+      },
+      "11": {
+        "name": "Chicken Burger",
+        "desc": "Grilled chicken breast with mayo and fresh vegetables."
+      },
+      "12": {
+        "name": "Double Burger",
+        "desc": "Two beef patties with double cheese and bacon."
+      },
+      "13": {
+        "name": "Chocolate Cake",
+        "desc": "Rich chocolate cake with creamy frosting."
+      },
+      "14": {
+        "name": "Tiramisu",
+        "desc": "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone."
+      },
+      "15": {
+        "name": "Ice Cream Sundae",
+        "desc": "Vanilla ice cream with chocolate sauce and toppings."
+      },
+      "16": {
+        "name": "Cheesecake",
+        "desc": "Creamy cheesecake with berry topping."
+      }
+    }
+  },
+  "services": {
+    "subtitle": "What We Offer",
+    "title": "Our Services",
+    "desc": "We work to meet market needs with the highest standards of quality and safety.",
+    "items": {
+      "1": {
+        "title": "Trusted Over the Years",
+        "description": "Our success is built on the trust of our clients in our products and services for decades."
+      },
+      "2": {
+        "title": "Local & Imported Products",
+        "description": "We provide a wide range of high-quality local and imported products from top brands."
+      },
+      "3": {
+        "title": "Wholesale & Distribution",
+        "description": "Reliable and fast distribution services for markets and restaurants nationwide."
+      },
+      "4": {
+        "title": "Easy & Fast Communication",
+        "description": "We ensure quick response and smooth communication through multiple channels."
+      }
+    }
+  },
+  "branches": {
+    "subtitle": "Our Locations",
+    "title": "Our Branches",
+    "desc": "Visit any of our branches and enjoy the same quality everywhere.",
+    "items": {
+      "1": {
+        "city": "Cairo",
+        "address": "Nasr City, Abbas El Akkad Street"
+      },
+      "2": {
+        "city": "Giza",
+        "address": "Dokki, Tahrir Street"
+      },
+      "3": {
+        "city": "Alexandria",
+        "address": "Smouha, Fawzy Moaz Street"
+      }
+    }
+  },
+  "about": {
+    "title": "Our Story",
+    "p1": "Tomato Restaurant was founded with a simple idea: to serve delicious food made from fresh ingredients and real passion. What started as a small kitchen has grown into a place where people come together to enjoy unforgettable flavors.",
+    "p2": "Every dish we prepare tells a story of quality, care, and love for cooking. From classic recipes to modern creations, our chefs work tirelessly to bring you an authentic dining experience that feels just like home.",
+    "stats": {
+      "years": "Years of Experience",
+      "menuItems": "Menu Items",
+      "customers": "Happy Customers"
+    },
+    "learnMore": "Learn More",
+    "imageAlt": "About Tomato Restaurant"
+  },
+  "footer": {
+    "tagline": "Tomato Restaurant delivers fresh, delicious meals crafted with passion and the finest ingredients. Taste the difference.",
+    "quickLinks": "Quick Links",
+    "openingHours": "Opening Hours",
+    "weekdays": "Mon – Fri: 10:00 AM – 10:00 PM",
+    "saturday": "Saturday: 12:00 PM – 12:00 AM",
+    "sunday": "Sunday: Closed",
+    "contact": "Contact",
+    "location": "Cairo, Egypt",
+    "phone": "+20 123 456 789",
+    "email": "info@tomato.com",
+    "copyright": "© 2026 TOMATO Restaurant. All Rights Reserved."
+  }
+}

@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+
+const STATS = [
+  { num: "10+", labelKey: "about.stats.years" },
+  { num: "50+", labelKey: "about.stats.menuItems" },
+  { num: "20K+", labelKey: "about.stats.customers" },
+];
 
 function About() {
+  const { t } = useTranslation();
+
   return (
     <section className="about-section" id="about">
       <div className="about-container">
-
-        {/* Image */}
         <motion.div
           className="about-image"
           initial={{ x: -80, opacity: 0 }}
@@ -15,13 +22,12 @@ function About() {
         >
           <motion.img
             src="/images/pexels-qaarif-16018410.jpg"
-            alt="About Tomato Restaurant"
+            alt={t("about.imageAlt")}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4 }}
           />
         </motion.div>
 
-        {/* Content */}
         <motion.div
           className="about-content"
           initial={{ x: 80, opacity: 0 }}
@@ -35,7 +41,7 @@ function About() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            Our Story
+            {t("about.title")}
           </motion.h2>
 
           <motion.p
@@ -45,10 +51,7 @@ function About() {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            Tomato Restaurant was founded with a simple idea: to serve
-            delicious food made from fresh ingredients and real passion.
-            What started as a small kitchen has grown into a place where
-            people come together to enjoy unforgettable flavors.
+            {t("about.p1")}
           </motion.p>
 
           <motion.p
@@ -58,13 +61,9 @@ function About() {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            Every dish we prepare tells a story of quality, care, and love
-            for cooking. From classic recipes to modern creations, our
-            chefs work tirelessly to bring you an authentic dining
-            experience that feels just like home.
+            {t("about.p2")}
           </motion.p>
 
-          {/* Stats */}
           <motion.div
             className="about-stats"
             initial="hidden"
@@ -73,30 +72,27 @@ function About() {
             variants={{
               hidden: {},
               visible: {
-                transition: { staggerChildren: 0.2 }
-              }
+                transition: { staggerChildren: 0.2 },
+              },
             }}
           >
-            {[
-              { num: "10+", label: "Years of Experience" },
-              { num: "50+", label: "Menu Items" },
-              { num: "20K+", label: "Happy Customers" },
-            ].map((item) => (
+            {STATS.map((item) => (
               <motion.div
-                key={item.label}
+                key={item.labelKey}
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 },
                 }}
               >
                 <h3>{item.num}</h3>
-                <span>{item.label}</span>
+                <span>{t(item.labelKey)}</span>
               </motion.div>
             ))}
           </motion.div>
 
           <motion.button
             className="about-btn"
+            type="button"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -104,10 +100,9 @@ function About() {
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
           >
-            Learn More
+            {t("about.learnMore")}
           </motion.button>
         </motion.div>
-
       </div>
     </section>
   );

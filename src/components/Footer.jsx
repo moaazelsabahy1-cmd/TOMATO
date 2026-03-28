@@ -1,6 +1,17 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
+const QUICK_LINKS = [
+  { key: "home", to: "/" },
+  { key: "about", to: "/about" },
+  { key: "menu", to: "/menu" },
+  { key: "services", to: "/services" },
+];
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <motion.div
@@ -10,8 +21,6 @@ function Footer() {
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-
-        {/* Brand */}
         <motion.div
           className="footer-col"
           initial={{ opacity: 0, y: 30 }}
@@ -25,13 +34,9 @@ function Footer() {
           >
             TOMATO
           </motion.h2>
-          <p>
-            Tomato Restaurant delivers fresh, delicious meals crafted with
-            passion and the finest ingredients. Taste the difference.
-          </p>
+          <p>{t("footer.tagline")}</p>
         </motion.div>
 
-        {/* Links */}
         <motion.div
           className="footer-col"
           initial={{ opacity: 0, y: 30 }}
@@ -39,17 +44,16 @@ function Footer() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <h4>Quick Links</h4>
+          <h4>{t("footer.quickLinks")}</h4>
           <ul>
-            {["Home", "About", "Menu", "Services"].map((item) => (
-              <motion.li key={item} whileHover={{ x: 6 }}>
-                <a href={`#${item.toLowerCase()}`}>{item}</a>
+            {QUICK_LINKS.map((item) => (
+              <motion.li key={item.key} whileHover={{ x: 6 }}>
+                <Link to={item.to}>{t(`nav.${item.key}`)}</Link>
               </motion.li>
             ))}
           </ul>
         </motion.div>
 
-        {/* Opening Hours */}
         <motion.div
           className="footer-col"
           initial={{ opacity: 0, y: 30 }}
@@ -57,15 +61,14 @@ function Footer() {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-          <h4>Opening Hours</h4>
+          <h4>{t("footer.openingHours")}</h4>
           <ul>
-            <li>Mon – Fri: 10:00 AM – 10:00 PM</li>
-            <li>Saturday: 12:00 PM – 12:00 AM</li>
-            <li>Sunday: Closed</li>
+            <li>{t("footer.weekdays")}</li>
+            <li>{t("footer.saturday")}</li>
+            <li>{t("footer.sunday")}</li>
           </ul>
         </motion.div>
 
-        {/* Contact */}
         <motion.div
           className="footer-col"
           initial={{ opacity: 0, y: 30 }}
@@ -73,11 +76,11 @@ function Footer() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <h4>Contact</h4>
+          <h4>{t("footer.contact")}</h4>
           <ul>
-            <li>📍 Cairo, Egypt</li>
-            <li>📞 +20 123 456 789</li>
-            <li>✉ info@tomato.com</li>
+            <li>📍 {t("footer.location")}</li>
+            <li>📞 {t("footer.phone")}</li>
+            <li>✉ {t("footer.email")}</li>
           </ul>
 
           <div className="footer-social">
@@ -93,10 +96,8 @@ function Footer() {
             ))}
           </div>
         </motion.div>
-
       </motion.div>
 
-      {/* Bottom */}
       <motion.div
         className="footer-bottom"
         initial={{ opacity: 0 }}
@@ -104,7 +105,7 @@ function Footer() {
         viewport={{ once: true }}
         transition={{ delay: 0.6 }}
       >
-        <p>© 2026 TOMATO Restaurant. All Rights Reserved.</p>
+        <p>{t("footer.copyright")}</p>
       </motion.div>
     </footer>
   );

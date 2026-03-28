@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="hero" id="home">
       <div className="hero-container">
-
-        {/* Text */}
         <motion.div
           className="hero-content"
           initial={{ x: -80, opacity: 0 }}
@@ -17,7 +18,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
           >
-            Order your <br /> favourite food here
+            {t("hero.titleLine1")} <br /> {t("hero.titleLine2")}
           </motion.h1>
 
           <motion.p
@@ -25,10 +26,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.7 }}
           >
-            Choose from a diverse menu featuring a delectable array of dishes
-            crafted with the finest ingredients and culinary expertise.
-            Our mission is to satisfy your cravings and elevate your dining
-            experience, one delicious meal at a time.
+            {t("hero.subtitle")}
           </motion.p>
 
           <motion.button
@@ -45,11 +43,10 @@ function Hero() {
               }
             }}
           >
-            View Menu
+            {t("hero.viewMenu")}
           </motion.button>
         </motion.div>
 
-        {/* Image - right side */}
         <motion.div
           className="hero-image"
           initial={{ x: 80, opacity: 0 }}
@@ -58,12 +55,11 @@ function Hero() {
         >
           <motion.img
             src="public/images/pexels-fidel-2814828.jpg"
-            alt="food"
+            alt={t("hero.imageAlt")}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4 }}
           />
         </motion.div>
-
       </div>
     </section>
   );

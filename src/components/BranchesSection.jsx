@@ -1,35 +1,25 @@
 import React from "react";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
-const branches = [
-  {
-    id: 1,
-    city: "Cairo",
-    address: "Nasr City, Abbas El Akkad Street",
-    phone: "+20 111 234 5678",
-  },
-  {
-    id: 2,
-    city: "Giza",
-    address: "Dokki, Tahrir Street",
-    phone: "+20 111 987 6543",
-  },
-  {
-    id: 3,
-    city: "Alexandria",
-    address: "Smouha, Fawzy Moaz Street",
-    phone: "+20 111 555 8899",
-  },
-];
+const BRANCH_IDS = [1, 2, 3];
+const PHONES = ["+20 111 234 5678", "+20 111 987 6543", "+20 111 555 8899"];
 
 const BranchesSection = () => {
+  const { t } = useTranslation();
+
+  const branches = BRANCH_IDS.map((id, i) => ({
+    id,
+    city: t(`branches.items.${id}.city`),
+    address: t(`branches.items.${id}.address`),
+    phone: PHONES[i],
+  }));
+
   return (
-    <section className="branches">
-      <span className="branches-subtitle">Our Locations</span>
-      <h2 className="branches-title">Our Branches</h2>
-      <p className="branches-desc">
-        Visit any of our branches and enjoy the same quality everywhere.
-      </p>
+    <section className="branches" id="branches">
+      <span className="branches-subtitle">{t("branches.subtitle")}</span>
+      <h2 className="branches-title">{t("branches.title")}</h2>
+      <p className="branches-desc">{t("branches.desc")}</p>
 
       <div className="branches-grid">
         {branches.map((branch) => (
