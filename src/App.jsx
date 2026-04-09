@@ -4,7 +4,7 @@ import Hero from "./components/hero.jsx";
 import About from "./components/About.jsx";
 import FoodMenu from "./components/foodmenu.jsx";
 import BranchesSection from "./components/BranchesSection.jsx";
-import ServicesSection from "./components/Servicesection.jsx";
+import ServicesSection from "./components/servicesection.jsx";
 import AboutPage from "./about/page.jsx";
 import MenuPage from "./menu/page.jsx";
 import ServicesPage from "./services/page.jsx";
