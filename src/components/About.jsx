@@ -6,6 +6,8 @@ const STATS = [
   { num: "50+", labelKey: "about.stats.menuItems" },
   { num: "20K+", labelKey: "about.stats.customers" },
 ];
+const FALLBACK_IMAGE =
+  "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'><rect width='100%25' height='100%25' fill='%23f3f4f6'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%236b7280' font-family='Arial' font-size='36'>Image not found</text></svg>";
 
 function About() {
   const { t } = useTranslation();
@@ -23,6 +25,11 @@ function About() {
           <motion.img
             src="/images/pexels-qaarif-16018410.jpg"
             alt={t("about.imageAlt")}
+            onError={(e) => {
+              if (e.currentTarget.src !== FALLBACK_IMAGE) {
+                e.currentTarget.src = FALLBACK_IMAGE;
+              }
+            }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4 }}
           />
