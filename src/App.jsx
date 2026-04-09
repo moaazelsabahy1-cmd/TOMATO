@@ -13,7 +13,6 @@ import BranchesPage from "./branches/page.jsx";
 export default function App() {
   return (
     <>
-      
       <Routes>
         <Route
           path="/"
@@ -32,7 +31,6 @@ export default function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/branches" element={<BranchesPage />} />
       </Routes>
-      
     </>
   );
 }

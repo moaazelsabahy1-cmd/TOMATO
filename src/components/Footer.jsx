@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -14,30 +14,27 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <motion.div
+      <Motion.div
         className="footer-container"
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <motion.div
+        <Motion.div
           className="footer-col"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
-          <motion.h2
-            className="footer-logo"
-            whileHover={{ scale: 1.08 }}
-          >
+          <Motion.h2 className="footer-logo" whileHover={{ scale: 1.08 }}>
             TOMATO
-          </motion.h2>
+          </Motion.h2>
           <p>{t("footer.tagline")}</p>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div
+        <Motion.div
           className="footer-col"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,14 +44,14 @@ function Footer() {
           <h4>{t("footer.quickLinks")}</h4>
           <ul>
             {QUICK_LINKS.map((item) => (
-              <motion.li key={item.key} whileHover={{ x: 6 }}>
+              <Motion.li key={item.key} whileHover={{ x: 6 }}>
                 <Link to={item.to}>{t(`nav.${item.key}`)}</Link>
-              </motion.li>
+              </Motion.li>
             ))}
           </ul>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div
+        <Motion.div
           className="footer-col"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,9 +64,9 @@ function Footer() {
             <li>{t("footer.saturday")}</li>
             <li>{t("footer.sunday")}</li>
           </ul>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div
+        <Motion.div
           className="footer-col"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,20 +82,20 @@ function Footer() {
 
           <div className="footer-social">
             {["🌐", "📘", "📸"].map((icon, i) => (
-              <motion.a
+              <Motion.a
                 key={i}
                 href="#"
                 whileHover={{ scale: 1.2, y: -4 }}
                 whileTap={{ scale: 0.9 }}
               >
                 {icon}
-              </motion.a>
+              </Motion.a>
             ))}
           </div>
-        </motion.div>
-      </motion.div>
+        </Motion.div>
+      </Motion.div>
 
-      <motion.div
+      <Motion.div
         className="footer-bottom"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -106,7 +103,7 @@ function Footer() {
         transition={{ delay: 0.6 }}
       >
         <p>{t("footer.copyright")}</p>
-      </motion.div>
+      </Motion.div>
     </footer>
   );
 }
