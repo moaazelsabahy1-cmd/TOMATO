@@ -23,7 +23,7 @@ function About() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.img
-            src="/images/pexels-qaarif-16018410.jpg"
+            src="/images/23.jpg"
             alt={t("about.imageAlt")}
             onError={(e) => {
               if (e.currentTarget.src !== FALLBACK_IMAGE) {

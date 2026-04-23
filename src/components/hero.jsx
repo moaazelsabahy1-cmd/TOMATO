@@ -54,7 +54,7 @@ function Hero() {
           transition={{ duration: 0.9, ease: "easeOut" }}
         >
           <motion.img
-            src="public/images/pexels-fidel-2814828.jpg"
+            src="/images/14.jpg"
             alt={t("hero.imageAlt")}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4 }}
